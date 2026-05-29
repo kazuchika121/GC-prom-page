@@ -29,7 +29,6 @@
             background-image: url('https://github.com/user-attachments/assets/5b58e322-4c60-4bac-b303-1a1e2ee24626');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             position: relative;
             background-color: var(--gold-light); /* 画像読み込み前のフォールバック */
         }
@@ -107,7 +106,7 @@
         </div>
     </nav>
 
-    <header class="hero-bg h-screen flex items-center justify-center text-center">
+    <header class="hero-bg md:bg-fixed h-screen flex items-center justify-center text-center">
         <div class="hero-content px-4 w-full max-w-4xl">
             <h2 class="text-gold font-en text-lg md:text-2xl tracking-[0.3em] mb-6 fade-in-up font-semibold">AWAKEN YOUR SENSES</h2>
             <h1 class="text-3xl md:text-6xl lg:text-7xl font-light text-white leading-tight mb-6 md:mb-8 fade-in-up drop-shadow-lg" style="transition-delay: 0.2s;">
@@ -304,7 +303,7 @@
         </div>
     </section>
 
-    <section id="contact" class="py-24 md:py-32 px-4 md:px-6 relative" style="background-image: url('./image/contact-bg.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+    <section id="contact" class="py-24 md:py-32 px-4 md:px-6 relative md:bg-fixed" style="background-image: url('./image/contact-bg.jpg'); background-size: cover; background-position: center;">
         <div class="absolute inset-0 bg-stone-950/90 backdrop-blur-sm"></div>
         <div class="relative z-10 max-w-4xl mx-auto fade-in-up">
             <div class="text-center mb-16">
