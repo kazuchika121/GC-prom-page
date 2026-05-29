@@ -1,1 +1,457 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOD-CLEANER・GOLD | 直感で選ばれる次世代デトックス</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Noto+Serif+JP:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* ゴールドの彩度をわずかに上げ、暗い部分を深くしてコントラストを強調 */
+            --gold-gradient: linear-gradient(135deg, #d4af37 0%, #8a6d3b 100%);
+            --gold-light: #fdfaf5;
+        }
+        body {
+            font-family: 'Noto Serif JP', serif;
+            background-color: var(--gold-light);
+            color: #1a1a1a; /* より深い黒に */
+            overflow-x: hidden;
+        }
+        .font-en {
+            font-family: 'Cormorant Garamond', serif;
+        }
+        .hero-bg {
+            background-image: url('file:///C:/Users/kazu2/.gemini/antigravity/brain/ebadc7b9-72f3-407f-8ca0-b89561ee6164/hero_relaxing_woman_1780010978229.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+        /* オーバーレイを濃くして文字の視認性を確保 */
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* ゴールドテキストに可読性を助けるシャドウを付与 */
+        .text-gold {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.1));
+        }
+        .btn-premium {
+            background: var(--gold-gradient);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            box-shadow: 0 10px 30px rgba(138, 109, 59, 0.4);
+            font-weight: 500;
+        }
+        .btn-premium::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 50%; height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-25deg);
+            transition: all 0.7s ease;
+        }
+        .btn-premium:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(138, 109, 59, 0.6);
+        }
+        .btn-premium:hover::before {
+            left: 200%;
+        }
+        /* グラスパネルの枠線を強調 */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(179, 139, 69, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+        .parallax-img {
+            transition: transform 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <nav class="fixed w-full z-50 transition-all duration-500 bg-black/10 backdrop-blur-sm hover:bg-white/95" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-en tracking-widest text-white transition-colors duration-500 drop-shadow-md" id="nav-brand">GOD&ndash;CLEANER GOLD</div>
+            <a href="#contact" class="px-6 py-2 border border-white text-white text-sm tracking-widest hover:bg-white hover:text-stone-900 transition-all duration-300 drop-shadow-md" id="nav-btn">CONTACT</a>
+        </div>
+    </nav>
 
+    <header class="hero-bg h-screen flex items-center justify-center text-center">
+        <div class="hero-content px-4 w-full max-w-4xl">
+            <h2 class="text-gold font-en text-lg md:text-2xl tracking-[0.3em] mb-6 fade-in-up font-semibold">AWAKEN YOUR SENSES</h2>
+            <h1 class="text-3xl md:text-6xl lg:text-7xl font-light text-white leading-tight mb-6 md:mb-8 fade-in-up drop-shadow-lg" style="transition-delay: 0.2s;">
+                言葉はいらない。<br>
+                <span class="italic font-serif">結果</span>がすべてを物語る。
+            </h1>
+            <p class="text-white text-base md:text-xl font-normal tracking-widest mb-10 md:mb-12 fade-in-up drop-shadow-md" style="transition-delay: 0.4s;">
+                導入実績4,500台。次世代デトックスマシンがもたらす「目に見える感動」。
+            </p>
+            <div class="fade-in-up" style="transition-delay: 0.6s;">
+                <a href="#experience" class="inline-block flex-col items-center justify-center group">
+                    <span class="text-white font-medium text-xs tracking-[0.2em] mb-3 block group-hover:text-gold transition-colors">DISCOVER</span>
+                    <div class="w-[1px] h-16 bg-white/50 mx-auto overflow-hidden relative">
+                        <div class="w-full h-full bg-white absolute top-[-100%] animate-[scrolldown_2s_infinite]"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="experience" class="py-32 px-6 bg-white">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-16 md:mb-24 fade-in-up">
+                <h3 class="text-xl md:text-4xl font-light text-stone-900 leading-loose">
+                    サロンの本当の価値を、<br>どうお客様に伝えていますか？
+                </h3>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+                <div class="fade-in-up">
+                    <p class="text-stone-800 leading-loose mb-8 text-base md:text-lg font-light text-justify md:text-left">
+                        「体が軽くなった」「スッキリした」<br class="hidden md:block">
+                        その感覚を、その場でお客様と共有できたら。<br><br>
+                        理屈や説明ではなく、直感的に伝わる驚き。<br class="hidden md:block">
+                        それが、圧倒的なリピート率と口コミを生み出す源泉です。
+                    </p>
+                    <p class="text-lg md:text-xl font-bold text-stone-900 border-l-4 border-[#dfc27d] pl-4 md:pl-6">
+                        「体感」を、「視覚」に変える。
+                    </p>
+                </div>
+                <div class="relative fade-in-up" style="transition-delay: 0.3s;">
+                    <img src="file:///C:/Users/kazu2/.gemini/antigravity/brain/ebadc7b9-72f3-407f-8ca0-b89561ee6164/premium_salon_interior_1780011000322.png" alt="Premium Salon" class="rounded-sm shadow-2xl w-full object-cover aspect-[4/5] parallax-img" data-speed="0.05">
+                    <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-[#dfc27d] rounded-full mix-blend-multiply filter blur-3xl opacity-30 -z-10"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 bg-stone-950 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-[#dfc27d]/20 to-transparent rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3"></div>
+        
+        <div class="container mx-auto max-w-6xl relative z-10">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div class="order-2 md:order-1 relative fade-in-up">
+                    <img src="file:///C:/Users/kazu2/.gemini/antigravity/brain/ebadc7b9-72f3-407f-8ca0-b89561ee6164/detox_abstract_water_1780011016781.png" alt="Purification" class="rounded-sm shadow-2xl w-full object-cover aspect-square border border-white/10">
+                </div>
+                <div class="order-1 md:order-2 fade-in-up">
+                    <h3 class="text-gold font-en tracking-[0.2em] text-xs md:text-sm mb-4 font-semibold">THE IMPACT</h3>
+                    <h2 class="text-3xl md:text-5xl font-light leading-tight mb-6 md:mb-8">
+                        一瞬で心を奪う、<br>
+                        美しい浄化のプロセス。
+                    </h2>
+                    <p class="text-stone-100 font-light leading-relaxed text-base md:text-lg mb-10 text-justify md:text-left">
+                        たった30分。<br>
+                        フットバスに足を入れるだけで始まる非日常。<br class="hidden md:block">
+                        テクノロジーが引き出す本来の美しさが、目の前で可視化される感動体験。<br>
+                        <br>
+                        専門的な知識や話術は必要ありません。<br class="hidden md:block">
+                        お客様自身の「驚き」が、サロンへの絶対的な信頼へと変わります。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 bg-[#fdfaf5]">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-2xl md:text-5xl text-center font-light text-stone-900 mb-16 md:mb-24 fade-in-up">
+                サロンに、新しい<span class="text-gold font-semibold italic">輝き</span>を。
+            </h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="glass-panel p-10 rounded-sm fade-in-up transition-transform hover:-translate-y-2">
+                    <div class="text-[#8a6d3b] text-4xl mb-6 font-en italic font-bold">01</div>
+                    <h4 class="text-xl text-stone-900 font-bold mb-4">直感的な集客力</h4>
+                    <p class="text-stone-800 font-normal text-sm leading-relaxed">
+                        「色が変化する」という圧倒的な視覚インパクト。お客様が思わず誰かに教えたくなる体験が、SNSや口コミによる自然な集客を生み出します。
+                    </p>
+                </div>
+                <div class="glass-panel p-10 rounded-sm fade-in-up shadow-xl" style="transition-delay: 0.1s;">
+                    <div class="text-[#8a6d3b] text-4xl mb-6 font-en italic font-bold">02</div>
+                    <h4 class="text-xl text-stone-900 font-bold mb-4">リピートの確約</h4>
+                    <p class="text-stone-800 font-normal text-sm leading-relaxed">
+                        目で見てわかる結果は、次回の来店動機を強力に後押しします。既存メニューと組み合わせることで、満足度と客単価が同時に向上します。
+                    </p>
+                </div>
+                <div class="glass-panel p-10 rounded-sm fade-in-up transition-transform hover:-translate-y-2" style="transition-delay: 0.2s;">
+                    <div class="text-[#8a6d3b] text-4xl mb-6 font-en italic font-bold">03</div>
+                    <h4 class="text-xl text-stone-900 font-bold mb-4">属人化からの脱却</h4>
+                    <p class="text-stone-800 font-normal text-sm leading-relaxed">
+                        スタッフの技術レベルに左右されない安定したサービス品質。準備も簡単で、サロンの貴重なリソースを奪いません。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 導入の声セクション -->
+    <section class="py-24 md:py-32 px-4 md:px-6 bg-white border-t border-stone-100">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-12 md:mb-20 fade-in-up">
+                <h3 class="text-gold font-en tracking-[0.2em] text-xs md:text-sm mb-4 font-semibold">OWNER'S VOICE</h3>
+                <h2 class="text-2xl md:text-5xl font-light text-stone-900">
+                    導入サロン様の声
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 md:gap-10">
+                <div class="p-8 bg-[#fdfaf5] border border-stone-200 rounded-sm fade-in-up shadow-sm">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-stone-300 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Owner" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-stone-900">エステティックサロン A様</p>
+                            <p class="text-xs text-stone-500">東京 / オーナー</p>
+                        </div>
+                    </div>
+                    <p class="text-stone-800 text-sm leading-relaxed">
+                        「お客様の反応が全く違います。『目に見える』ことで説得力が生まれ、次回予約をその場で入れていただけるようになりました。投資回収も予想以上に早かったです。」
+                    </p>
+                </div>
+                <div class="p-8 bg-[#fdfaf5] border border-stone-200 rounded-sm fade-in-up shadow-sm" style="transition-delay: 0.1s;">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-stone-300 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Owner" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-stone-900">リラクゼーションサロン B様</p>
+                            <p class="text-xs text-stone-500">大阪 / オーナー</p>
+                        </div>
+                    </div>
+                    <p class="text-stone-800 text-sm leading-relaxed">
+                        「スタッフの技術に依存しないメニューを探していました。ゴッドクリーナーは準備が簡単で、新人スタッフでもすぐに自信を持って提供できるのが素晴らしいです。」
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 追加：PLAN & PROMOTION セクション -->
+    <section id="plan" class="py-24 md:py-32 px-4 md:px-6 bg-[#fdfaf5] border-t border-stone-100">
+        <div class="container mx-auto max-w-5xl">
+            <div class="text-center mb-12 md:mb-20 fade-in-up">
+                <h3 class="text-gold font-en tracking-[0.2em] text-xs md:text-sm mb-4 font-semibold">PLAN & INVESTMENT</h3>
+                <h2 class="text-2xl md:text-5xl font-light text-stone-900">
+                    サロンの規模に応じた、<br class="md:hidden">確かな投資。
+                </h2>
+            </div>
+
+            <!-- ターゲット別のアプローチカード -->
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 mb-16 fade-in-up">
+                <div class="p-8 md:p-12 bg-white rounded-sm border border-stone-200 shadow-sm">
+                    <h4 class="text-xl font-bold text-stone-900 mb-4 flex items-center">
+                        <span class="w-2 h-6 bg-[#b38b45] mr-3 block"></span>
+                        個人サロンオーナー様へ
+                    </h4>
+                    <p class="text-stone-800 font-normal text-sm md:text-base leading-loose text-justify md:text-left">
+                        初期費用の負担を軽減し、手元のキャッシュフローを安定させる「リースプラン」や「割賦プラン」もご用意。1日わずかな稼働で十分に投資回収ができるシミュレーションをご提案いたします。
+                    </p>
+                </div>
+                <div class="p-8 md:p-12 bg-white rounded-sm border border-stone-200 shadow-sm">
+                    <h4 class="text-xl font-bold text-stone-900 mb-4 flex items-center">
+                        <span class="w-2 h-6 bg-[#b38b45] mr-3 block"></span>
+                        複数店舗サロンオーナー様へ
+                    </h4>
+                    <p class="text-stone-800 font-normal text-sm md:text-base leading-loose text-justify md:text-left">
+                        複数台の一括導入における「ボリュームディスカウント」のご相談を承ります。全店舗でのサービス均一化と、スタッフ様の導入教育をトータルでバックアップする特別パッケージをご案内可能です。
+                    </p>
+                </div>
+            </div>
+
+            <!-- プロモーションの告知 -->
+            <div class="p-8 bg-stone-900 text-white rounded-sm text-center max-w-3xl mx-auto fade-in-up shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 left-0 bg-[#dfc27d] text-stone-950 text-xs font-bold px-4 py-1 tracking-widest uppercase">
+                    Limited Campaign
+                </div>
+                <h4 class="text-xl md:text-2xl font-medium text-[#dfc27d] mb-4 mt-2">
+                    【Web問い合わせ限定】特別プロモーション実施中
+                </h4>
+                <p class="text-stone-300 font-light text-sm md:text-base leading-relaxed">
+                    現在、新規導入を応援する限定プランをご用意しております。<br>
+                    プロモーションの適用条件、および詳細な価格表は資料請求にてお届けします。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 md:py-32 px-4 md:px-6 relative" style="background-image: url('file:///C:/Users/kazu2/.gemini/antigravity/brain/ebadc7b9-72f3-407f-8ca0-b89561ee6164/premium_salon_interior_1780011000322.png'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <div class="absolute inset-0 bg-stone-950/90 backdrop-blur-sm"></div>
+        <div class="relative z-10 max-w-4xl mx-auto fade-in-up">
+            <div class="text-center mb-16">
+                <h2 class="text-2xl md:text-5xl font-light text-white mb-6 leading-tight">
+                    あなたのサロンに、<br class="md:hidden">
+                    <span class="text-gold font-semibold">プレミアム</span>な体験を。
+                </h2>
+                <p class="text-white text-sm md:text-lg font-normal mb-4">
+                    まずは詳しい資料で、その価値をお確かめください。
+                </p>
+                <div class="inline-block bg-[#b38b45]/20 border border-[#dfc27d] px-4 md:px-6 py-3 rounded-full mb-8">
+                    <p class="text-[#dfc27d] font-bold text-xs md:text-base tracking-wide">
+                        【無料】3分で完了。機械詳細資料と価格表をメールでお届けします
+                    </p>
+                </div>
+            </div>
+
+            <!-- Formspree フォーム -->
+            <div class="bg-white p-6 md:p-10 rounded-sm shadow-2xl mb-12">
+                <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-stone-700 mb-2">貴社名/サロン名 <span class="text-red-500">*</span></label>
+                            <input type="text" name="company" required class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-[#b38b45] focus:ring-1 focus:ring-[#b38b45] transition-colors">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-stone-700 mb-2">ご担当者名 <span class="text-red-500">*</span></label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-[#b38b45] focus:ring-1 focus:ring-[#b38b45] transition-colors">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-stone-700 mb-2">メールアドレス <span class="text-red-500">*</span></label>
+                        <input type="email" name="email" required class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-[#b38b45] focus:ring-1 focus:ring-[#b38b45] transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-stone-700 mb-2">電話番号</label>
+                        <input type="tel" name="phone" class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-[#b38b45] focus:ring-1 focus:ring-[#b38b45] transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-stone-700 mb-2">ご質問・ご要望等</label>
+                        <textarea name="message" rows="4" class="w-full px-4 py-3 border border-stone-300 rounded-sm focus:outline-none focus:border-[#b38b45] focus:ring-1 focus:ring-[#b38b45] transition-colors"></textarea>
+                    </div>
+                    <div class="text-center pt-4">
+                        <button type="submit" class="btn-premium inline-block w-full md:w-auto px-12 py-4 text-lg tracking-[0.2em] rounded-sm font-semibold uppercase">
+                            詳細資料を請求する
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- 電話・LINE -->
+            <div class="grid md:grid-cols-2 gap-6 text-center">
+                <div class="bg-stone-900/50 border border-white/20 p-8 rounded-sm backdrop-blur-md transition-transform hover:-translate-y-1">
+                    <p class="text-stone-300 text-sm mb-4">お電話でのご相談はこちら</p>
+                    <a href="tel:0120-977-801" class="text-2xl md:text-3xl text-gold font-en font-semibold tracking-wider hover:text-white transition-colors block mb-2">
+                        0120&ndash;977&ndash;801
+                    </a>
+                    <p class="text-stone-500 text-xs">平日 10:00 - 18:00</p>
+                </div>
+                <div class="bg-stone-900/50 border border-white/20 p-8 rounded-sm backdrop-blur-md transition-transform hover:-translate-y-1">
+                    <p class="text-stone-300 text-sm mb-4">LINEでお気軽に質問</p>
+                    <a href="#" class="inline-flex items-center justify-center bg-[#06C755] text-white px-8 py-3 rounded-sm font-bold tracking-wider hover:bg-[#05b34c] transition-colors w-full md:w-auto">
+                        <svg class="w-6 h-6 mr-2 fill-current" viewBox="0 0 24 24"><path d="M24 10.304c0-5.369-5.383-9.738-12-9.738-6.616 0-12 4.369-12 9.738 0 4.814 3.514 8.888 8.528 9.589.39.083.923.258 1.058.59.12.295.077.756.036 1.08l-.138 1.049c-.053.33-.243 1.054.912.569 1.156-.486 6.223-3.665 8.441-6.241C22.617 14.887 24 12.712 24 10.304z"/></svg>
+                        友だち追加
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-stone-950 py-16 px-6 border-t border-white/10">
+        <div class="container mx-auto text-center">
+            <div class="font-en text-gold text-2xl tracking-[0.3em] mb-8 font-semibold">GOD&ndash;CLEANER GOLD</div>
+            <div class="flex justify-center space-x-8 mb-8 text-sm text-stone-400 font-medium">
+                <a href="#" class="hover:text-gold transition-colors">プライバシーポリシー</a>
+                <a href="#" class="hover:text-gold transition-colors">会社概要</a>
+            </div>
+            <p class="text-stone-500 text-xs font-light tracking-widest">
+                &copy; 2026 Mind Fitness Co,Ltd. All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <style>
+        @keyframes scrolldown {
+            0% { top: -100%; }
+            100% { top: 100%; }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach((el) => {
+                observer.observe(el);
+            });
+
+            const navbar = document.getElementById('navbar');
+            const navBrand = document.getElementById('nav-brand');
+            const navBtn = document.getElementById('nav-btn');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.replace('bg-black/10', 'bg-white/95');
+                    navbar.classList.add('shadow-md');
+                    navBrand.classList.replace('text-white', 'text-stone-900');
+                    navBrand.classList.remove('drop-shadow-md');
+                    
+                    navBtn.classList.replace('border-white', 'border-stone-900');
+                    navBtn.classList.replace('text-white', 'text-stone-900');
+                    navBtn.classList.replace('hover:bg-white', 'hover:bg-stone-900');
+                    navBtn.classList.replace('hover:text-stone-900', 'hover:text-white');
+                    navBtn.classList.remove('drop-shadow-md');
+                } else {
+                    navbar.classList.replace('bg-white/95', 'bg-black/10');
+                    navbar.classList.remove('shadow-md');
+                    navBrand.classList.replace('text-stone-900', 'text-white');
+                    navBrand.classList.add('drop-shadow-md');
+                    
+                    navBtn.classList.replace('border-stone-900', 'border-white');
+                    navBtn.classList.replace('text-stone-900', 'text-white');
+                    navBtn.classList.replace('hover:bg-stone-900', 'hover:bg-white');
+                    navBtn.classList.replace('hover:text-white', 'hover:text-stone-900');
+                    navBtn.classList.add('drop-shadow-md');
+                }
+            });
+
+            const parallaxImages = document.querySelectorAll('.parallax-img');
+            window.addEventListener('scroll', () => {
+                requestAnimationFrame(() => {
+                    parallaxImages.forEach(img => {
+                        const speed = img.getAttribute('data-speed');
+                        const yPos = -(window.scrollY * speed);
+                        img.style.transform = `translateY(${yPos}px)`;
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
