@@ -127,8 +127,54 @@
         </div>
     </header>
 
-    <section id="experience" class="py-32 px-6 bg-white">
-        <div class="container mx-auto max-w-5xl">
+    <!-- キャンペーン告知＆個人購入可の案内（ページ上部） -->
+    <section class="bg-[#fdfaf5] py-10 border-b border-stone-200">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <!-- 個人向けのご案内 -->
+            <div class="text-center mb-8 fade-in-up">
+                <span class="inline-block border border-[#b38b45] text-[#b38b45] px-8 py-3 rounded-full text-sm md:text-base font-bold tracking-widest bg-white shadow-sm">
+                    法人・サロン様はもちろん、個人様のご購入も承っております
+                </span>
+            </div>
+            
+            <!-- キャンペーンバナー -->
+            <div class="bg-white p-6 md:p-8 rounded-sm shadow-lg border border-stone-100 flex flex-col md:flex-row items-center justify-between fade-in-up" style="transition-delay: 0.1s;">
+                <div class="flex items-center mb-6 md:mb-0 w-full md:w-auto">
+                    <div class="bg-[#c81e1e] text-white text-center py-4 px-6 rounded-sm shadow-md font-bold shrink-0 w-full md:w-auto">
+                        <span class="text-xs block mb-1">期間限定</span>
+                        <span class="text-lg md:text-xl block tracking-widest">このサイト限定</span>
+                        <span class="text-xs block mt-1">キャンペーン実施中</span>
+                    </div>
+                </div>
+                
+                <div class="flex-1 px-0 md:px-8 text-center md:text-left mb-6 md:mb-0">
+                    <div class="text-[#c81e1e] font-bold text-sm mb-2 flex items-center justify-center md:justify-start">
+                        <span class="mr-2">🎁</span> 今だけの特別特典
+                    </div>
+                    <h3 class="text-xl md:text-2xl font-bold text-stone-900 mb-2 leading-snug">
+                        電極カートリッジ <span class="text-stone-400 line-through font-normal text-lg">（通常39,600円）</span><br>
+                        が <span class="text-[#c81e1e] text-3xl md:text-4xl">1本無料</span> でついてくる！
+                    </h3>
+                    <p class="text-xs text-stone-500 mt-2">※このサイトからのお申し込みのみ適用。数量限定につき、お早めにどうぞ。</p>
+                </div>
+
+                <div class="shrink-0 w-full md:w-auto text-center">
+                    <a href="#contact" class="inline-block bg-[#c81e1e] hover:bg-[#9b1c1c] text-white font-bold py-4 px-8 rounded-full shadow-lg transition-colors w-full md:w-auto">
+                        無料資料請求 ➔
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-32 px-6 bg-white relative overflow-hidden">
+        <!-- 追加: 植物のアクセント画像（乗算ブレンドで白背景を透過させ、影のように配置） -->
+        <img src="https://github.com/user-attachments/assets/8169dd1f-0916-4fd5-8aab-f3c0f16c28f4" alt="" class="absolute -top-20 -left-20 w-[400px] md:w-[600px] opacity-[0.15] mix-blend-multiply pointer-events-none -rotate-12">
+        
+        <!-- 追加: セクション右上に薄いグリーンのぼかし背景 -->
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-emerald-100/40 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+
+        <div class="container mx-auto max-w-5xl relative z-10">
             <div class="text-center mb-16 md:mb-24 fade-in-up">
                 <h3 class="text-xl md:text-4xl font-light text-stone-900 leading-loose">
                     サロンの本当の価値を、<br>どうお客様に伝えていますか？
@@ -143,13 +189,17 @@
                         理屈や説明ではなく、直感的に伝わる驚き。<br class="hidden md:block">
                         それが、圧倒的なリピート率と口コミを生み出す源泉です。
                     </p>
-                    <p class="text-lg md:text-xl font-bold text-stone-900 border-l-4 border-[#dfc27d] pl-4 md:pl-6">
+                    <!-- 変更: 左側のアクセントボーダーを、落ち着いたグリーンに変更 -->
+                    <p class="text-lg md:text-xl font-bold text-stone-900 border-l-4 border-emerald-700/60 pl-4 md:pl-6">
                         「体感」を、「視覚」に変える。
                     </p>
                 </div>
                 <div class="relative fade-in-up" style="transition-delay: 0.3s;">
-                    <img src="file:///C:/Users/kazu2/.gemini/antigravity/brain/ebadc7b9-72f3-407f-8ca0-b89561ee6164/premium_salon_interior_1780011000322.png" alt="Premium Salon" class="rounded-sm shadow-2xl w-full object-cover aspect-[4/5] parallax-img" data-speed="0.05">
+                    <!-- AI生成したサロン内（談笑・カウンセリング中）の画像 -->
+                    <img src="./image/salon-consultation.png" alt="Premium Salon Consultation" class="rounded-sm shadow-2xl w-full object-cover aspect-[4/5] parallax-img" data-speed="0.05">
+                    <!-- 変更: ゴールドのぼかしに加え、右上にグリーンのぼかしも追加して奥行きと癒やしを演出 -->
                     <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-[#dfc27d] rounded-full mix-blend-multiply filter blur-3xl opacity-30 -z-10"></div>
+                    <div class="absolute -top-10 -right-10 w-48 h-48 bg-emerald-600 rounded-full mix-blend-multiply filter blur-3xl opacity-15 -z-10"></div>
                 </div>
             </div>
         </div>
@@ -160,8 +210,11 @@
         
         <div class="container mx-auto max-w-6xl relative z-10">
             <div class="grid md:grid-cols-2 gap-20 items-center">
-                <div class="order-2 md:order-1 relative fade-in-up">
-                    <img src="file:///C:/Users/kazu2/.gemini/antigravity/brain/ebadc7b9-72f3-407f-8ca0-b89561ee6164/detox_abstract_water_1780011016781.png" alt="Purification" class="rounded-sm shadow-2xl w-full object-cover aspect-square border border-white/10">
+                <div class="order-2 md:order-1 relative fade-in-up" style="perspective: 1000px;">
+                    <!-- Safari等のブラウザで動画の角丸が効かないバグを回避するため、特殊なCSS（isolate, mask-image）と直接のスタイル指定を追加しています -->
+                    <div class="rounded-[2rem] overflow-hidden shadow-2xl transition-transform duration-1000 ease-out hover:rotate-0 hover:scale-100 cursor-pointer w-full aspect-square border border-white/10 bg-black isolate" style="transform: rotateY(12deg) rotateX(5deg) scale(0.95); -webkit-mask-image: -webkit-radial-gradient(white, black);">
+                        <video src="Video%20Project%20(1).mp4" autoplay loop muted playsinline class="w-full h-full object-cover rounded-[2rem]" style="border-radius: 2rem;"></video>
+                    </div>
                 </div>
                 <div class="order-1 md:order-2 fade-in-up">
                     <h3 class="text-gold font-en tracking-[0.2em] text-xs md:text-sm mb-4 font-semibold">THE IMPACT</h3>
@@ -226,7 +279,8 @@
                 <div class="p-8 bg-[#fdfaf5] border border-stone-200 rounded-sm fade-in-up shadow-sm">
                     <div class="flex items-center mb-6">
                         <div class="w-12 h-12 bg-stone-300 rounded-full overflow-hidden mr-4">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=150&q=80" alt="Owner" class="w-full h-full object-cover">
+                            <!-- AI生成した日本人女性の画像 -->
+                            <img src="./image/japanese-owner-1.png" alt="Owner" class="w-full h-full object-cover">
                         </div>
                         <div>
                             <p class="text-sm font-bold text-stone-900">エステティックサロン A様</p>
@@ -240,7 +294,8 @@
                 <div class="p-8 bg-[#fdfaf5] border border-stone-200 rounded-sm fade-in-up shadow-sm" style="transition-delay: 0.1s;">
                     <div class="flex items-center mb-6">
                         <div class="w-12 h-12 bg-stone-300 rounded-full overflow-hidden mr-4">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80" alt="Owner" class="w-full h-full object-cover">
+                            <!-- AI生成した日本人女性の画像 -->
+                            <img src="./image/japanese-owner-2.png" alt="Owner" class="w-full h-full object-cover">
                         </div>
                         <div>
                             <p class="text-sm font-bold text-stone-900">リラクゼーションサロン B様</p>
@@ -287,19 +342,7 @@
                 </div>
             </div>
 
-            <!-- プロモーションの告知 -->
-            <div class="p-8 bg-stone-900 text-white rounded-sm text-center max-w-3xl mx-auto fade-in-up shadow-xl relative overflow-hidden">
-                <div class="absolute top-0 left-0 bg-[#dfc27d] text-stone-950 text-xs font-bold px-4 py-1 tracking-widest uppercase">
-                    Limited Campaign
-                </div>
-                <h4 class="text-xl md:text-2xl font-medium text-[#dfc27d] mb-4 mt-2">
-                    【Web問い合わせ限定】特別プロモーション実施中
-                </h4>
-                <p class="text-stone-300 font-light text-sm md:text-base leading-relaxed">
-                    現在、新規導入を応援する限定プランをご用意しております。<br>
-                    プロモーションの適用条件、および詳細な価格表は資料請求にてお届けします。
-                </p>
-            </div>
+            <!-- （旧プロモーション告知セクションは削除） -->
         </div>
     </section>
 
