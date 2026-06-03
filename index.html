@@ -210,9 +210,9 @@
         
         <div class="container mx-auto max-w-6xl relative z-10">
             <div class="grid md:grid-cols-2 gap-20 items-center">
-                <div class="order-2 md:order-1 relative fade-in-up" style="perspective: 1000px;">
-                    <!-- Safari等のブラウザで動画の角丸が効かないバグを回避するため、特殊なCSS（isolate, mask-image）と直接のスタイル指定を追加しています -->
-                    <div class="rounded-[2rem] overflow-hidden shadow-2xl transition-transform duration-1000 ease-out hover:rotate-0 hover:scale-100 cursor-pointer w-full aspect-square border border-white/10 bg-black isolate" style="transform: rotateY(12deg) rotateX(5deg) scale(0.95); -webkit-mask-image: -webkit-radial-gradient(white, black);">
+                <div class="order-2 md:order-1 relative fade-in-up">
+                    <!-- Safari等での角丸バグ対策を残しつつ、シンプルな正方形で表示します -->
+                    <div class="rounded-[2rem] overflow-hidden shadow-2xl w-full aspect-square border border-white/10 bg-black isolate" style="-webkit-mask-image: -webkit-radial-gradient(white, black);">
                         <video src="Video%20Project%20(1).mp4" autoplay loop muted playsinline class="w-full h-full object-cover rounded-[2rem]" style="border-radius: 2rem;"></video>
                     </div>
                 </div>
